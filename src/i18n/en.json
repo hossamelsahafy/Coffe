@@ -1,0 +1,41 @@
+{
+  "try": {
+    "hello": "Hello",
+    "welcome": "Welcome to our website"
+  },
+  "nav": {
+    "aboutUs": "About us",
+    "contactUs": "Contact Us",
+    "products": "Products",
+    "collection": "Coffee Collection",
+    "item": "Items",
+    "capsulatedCoffee": "Capsulated Coffee",
+    "brewingTools": "Brewing Tools",
+    "roastGrinders": "Roast & Grinders",
+    "coffee": "Coffee"
+  },
+  "footer": {
+    "coffeeCup": "A cup of coffee, a",
+    "momentOfTime": "moment of your time",
+    "coffeeMarketText": "As the coffee shop market becomes more popular, the number of cafe websites is growing. The internet and social media play an important role in finding new customers.",
+    "shopLinks": [
+      { "id": 1, "label": "Search", "href": "/search" },
+      { "id": 2, "label": "All collections", "href": "/collections" },
+      { "id": 3, "label": "All products", "href": "/products" },
+      { "id": 4, "label": "My Cart", "href": "/cart" },
+      { "id": 5, "label": "Compare", "href": "/compare" },
+      { "id": 6, "label": "Wishlist", "href": "/wishlist" }
+    ],
+    "accountLinks": [
+      { "id": 1, "label": "About Us", "href": "/about-us" },
+      { "id": 2, "label": "Contact with us", "href": "/contact-us" },
+      { "id": 3, "label": "Faq's", "href": "/faq" },
+      { "id": 4, "label": "Privacy Policy", "href": "/privacy-policy" },
+      { "id": 5, "label": "Shipping & Delivery", "href": "/shipping-delivery" },
+      { "id": 6, "label": "Terms & Conditions", "href": "/terms-conditions" }
+    ],
+    "shop": "Shop",
+    "account": "Account",
+    "share": "Share"
+  }
+}

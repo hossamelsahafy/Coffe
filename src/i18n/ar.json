@@ -1,0 +1,43 @@
+{
+  "try": {
+    "hello": "مرحبا",
+    "welcome": "أهلاً بك في موقعنا"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "aboutUs": "معلومات عنا",
+    "contactUs": "اتصل بنا",
+    "products": "المنتجات",
+    "moreOptions": "المزيد",
+    "collection": "مجموعة القهوة",
+    "item": "عناصر",
+    "capsulatedCoffee": "قهوة بالكبسولات",
+    "brewingTools": "أدوات التحضير",
+    "roastGrinders": "التحميص والطواحين",
+    "coffee": "القهوة"
+  },
+  "footer": {
+    "coffeeCup": "كوب من القهوة،",
+    "momentOfTime": "لحظة من وقتك",
+    "coffeeMarketText": "مع ازدياد شعبية سوق المقاهي، يزداد عدد مواقع المقاهي على الإنترنت. تلعب وسائل التواصل الاجتماعي دوراً مهماً في جذب عملاء جدد.",
+    "shopLinks": [
+      { "id": 1, "label": "بحث", "href": "/search" },
+      { "id": 2, "label": "جميع المجموعات", "href": "/collections" },
+      { "id": 3, "label": "جميع المنتجات", "href": "/products" },
+      { "id": 4, "label": "سلة التسوق", "href": "/cart" },
+      { "id": 5, "label": "قارن", "href": "/compare" },
+      { "id": 6, "label": "قائمة الرغبات", "href": "/wishlist" }
+    ],
+    "accountLinks": [
+      { "id": 1, "label": "من نحن", "href": "/about-us" },
+      { "id": 2, "label": "تواصل معنا", "href": "/contact-us" },
+      { "id": 3, "label": "الأسئلة الشائعة", "href": "/faq" },
+      { "id": 4, "label": "سياسة الخصوصية", "href": "/privacy-policy" },
+      { "id": 5, "label": "الشحن والتوصيل", "href": "/shipping-delivery" },
+      { "id": 6, "label": "الشروط والأحكام", "href": "/terms-conditions" }
+    ],
+    "shop": "المتجر",
+    "account": "الجساب",
+    "share": "مشاركة"
+  }
+}

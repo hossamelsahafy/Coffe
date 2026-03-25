@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+body {
+  background-color: black;
+}
+.container {
+  @apply max-w-7xl mx-auto p-6;
+}
+
+:root {
+  --color-base-light: white;
+  --color-base-dark: black;
+  --color-base-coffe: #a7897b;
+  --color-base-nav: #262626;
+  --color-base-border: #272727;
+}
+@theme {
+  --color-base-light: white;
+  --color-base-dark: black;
+  --color-base-coffe: #a7897b;
+  --color-base-nav: #262626;
+  --color-base-border: #272727;
+}
