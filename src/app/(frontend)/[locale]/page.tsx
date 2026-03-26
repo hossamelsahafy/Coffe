@@ -1,6 +1,8 @@
-'use client'
-import { useTranslations } from 'next-intl'
-
+import Header from '@/components/ui/Header/Header'
 export default function Home() {
-  return <main className=""></main>
+  return (
+    <main className="h-full">
+      <Header />
+    </main>
+  )
 }

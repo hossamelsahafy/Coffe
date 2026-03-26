@@ -36,7 +36,7 @@ const Footer = ({ locale }) => {
           <Image width={150} height={150} alt="left image" src={'/assets/left.webp'} />
         </div>
 
-        <div className="flex flex-col justify-center w-full lg:max-w-102.5 mt-20 items-start gap-2">
+        <div className="flex flex-col justify-center w-full lg:max-w-102.5 mt-5 lg:mt-20 items-start gap-2">
           <Image
             width={70}
             height={70}
@@ -52,7 +52,7 @@ const Footer = ({ locale }) => {
         </div>
 
         {/* Shop links */}
-        <div className="flex flex-col mt-10 lg:mt-20 gap-2">
+        <div className="flex flex-col mt-5 lg:mt-20 gap-2">
           <span className="font-bold text-2xl">{t('shop')} :</span>
           <ul className="flex flex-col gap-2">
             {shopLinks.map((link) => (
@@ -66,7 +66,7 @@ const Footer = ({ locale }) => {
         </div>
 
         {/* Account links */}
-        <div className="flex flex-col mt-10 lg:mt-20 gap-2">
+        <div className="flex flex-col mt-5 lg:mt-20 gap-2">
           <span className="font-bold text-2xl">{t('account')} :</span>
           <ul className="flex flex-col gap-2">
             {accountLinks.map((link) => (
@@ -80,7 +80,7 @@ const Footer = ({ locale }) => {
         </div>
 
         {/* Share links */}
-        <div className="flex flex-col mt-10 lg:mt-20 gap-2">
+        <div className="flex flex-col mt-5 lg:mt-20 gap-2">
           <span className="font-bold text-2xl">{t('share')} :</span>
           <div className="flex flex-row gap-4">
             {shareIcons.map((link, index) => (

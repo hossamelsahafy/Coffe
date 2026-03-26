@@ -37,5 +37,12 @@
     "shop": "Shop",
     "account": "Account",
     "share": "Share"
+  },
+  "header": {
+    "title": "Coffee",
+    "subtitle": "Coffee that fuels your dreams. Life is short, stay awake for it. Coffee, Art, and Vintage. Fuel for your creativity.",
+    "fresh": "Fresh roasted coffee",
+    "freshSpan": "with 24h delivery",
+    "partners": "partners"
   }
 }
