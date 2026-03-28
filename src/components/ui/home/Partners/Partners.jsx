@@ -6,7 +6,7 @@ import PartnersSwiper from './PartnersSwiper'
 const Partners = ({ locale, t }) => {
   return (
     <section className="w-full md:mt-22 flex flex-col text-base-light relative p-4 justify-center items-center">
-      <div className="flex flex-col md:flex-row w-full md:justify-center items-start md:items-center gap-10 md:gap-20">
+      <div className="flex flex-col md:flex-row w-full md:justify-center items-start md:items-center gap-10">
         <div className="flex flex-col justify-center ">
           <p
             className={`text-lg ${locale === 'en' ? 'text-left' : 'text-right'} lg:text-xl font-bold tracking-tighter`}

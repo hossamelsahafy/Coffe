@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import React from 'react'
 import { useParams } from 'next/navigation'
 import TextAnimation from '@/components/ui/animation/TextAnimation'
-import Partners from '@/components/ui/home/Partners'
+import Partners from '@/components/ui/home/Partners/Partners'
 const Header = () => {
   const currentDate = new Date()
   const { locale } = useParams()
@@ -16,7 +16,7 @@ const Header = () => {
           className={`hidden md:flex flex-col items-center gap-4 absolute ${locale === 'en' ? 'left-4' : 'right-4'} top-1/2 transform -translate-y-1/2 text-2xl font-semibold`}
         >
           <p className="rotate-90">
-            {currentDate.getDate()}/{currentDate.getDay()}
+            {currentDate.getDate()}/{currentDate.getMonth() + 1}
           </p>
           <div className="border-l my-2 border-white h-80" />
           <p className="rotate-90">{t('title')}</p>

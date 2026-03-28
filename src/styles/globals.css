@@ -12,6 +12,8 @@ body {
   --color-base-coffe: #a7897b;
   --color-base-nav: #262626;
   --color-base-border: #272727;
+  --color-coffeText: #a7897b;
+  --color-highlightedProductsbg: #40342f;
 }
 @theme {
   --color-base-light: white;
@@ -19,4 +21,6 @@ body {
   --color-base-coffe: #a7897b;
   --color-base-nav: #262626;
   --color-base-border: #272727;
+  --color-coffeText: #a7897b;
+  --color-highlightedProductsbg: #40342f;
 }
