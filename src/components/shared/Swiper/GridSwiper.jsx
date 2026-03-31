@@ -41,7 +41,7 @@ const GridSwiper = ({ filteredProducts, renderItem, bg, breakpoints, loop }) => 
       {navigationReady && (
         <>
           <Swiper
-            modules={[Grid, Navigation, Autoplay, Pagination]} // Pagination must be here
+            modules={[Grid, Navigation, Autoplay, Pagination]}
             slidesPerView={3}
             grid={{ rows: filteredProducts.length < 3 ? 1 : 2, fill: 'row' }}
             spaceBetween={16}
@@ -50,14 +50,35 @@ const GridSwiper = ({ filteredProducts, renderItem, bg, breakpoints, loop }) => 
             navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
             pagination={{
               clickable: true,
-              el: paginationRef.current, // <-- important
+              el: paginationRef.current,
               bulletClass: 'swiper-pagination-bullet',
               bulletActiveClass: 'swiper-pagination-bullet-active',
             }}
-            onBeforeInit={(swiper) => {
-              if (paginationRef.current) {
-                swiper.params.pagination.el = paginationRef.current // <-- bind before init
-              }
+            onSwiper={(swiper) => {
+              setTimeout(() => {
+                // ✅ تأكد إن كل حاجة موجودة قبل الاستخدام
+                if (paginationRef.current && swiper.pagination) {
+                  swiper.params.pagination = {
+                    ...swiper.params.pagination,
+                    el: paginationRef.current,
+                  }
+
+                  swiper.pagination.init()
+                  swiper.pagination.render()
+                  swiper.pagination.update()
+                }
+
+                if (prevRef.current && nextRef.current && swiper.navigation) {
+                  swiper.params.navigation = {
+                    ...swiper.params.navigation,
+                    prevEl: prevRef.current,
+                    nextEl: nextRef.current,
+                  }
+
+                  swiper.navigation.init()
+                  swiper.navigation.update()
+                }
+              })
             }}
             breakpoints={breakpoints}
             className="w-full mt-10"

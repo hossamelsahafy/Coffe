@@ -37,18 +37,18 @@ body {
   --color-forTra: #a7897b61;
   --color-highlightedProductsbg: #40342f;
 }
-/* globals.css or your global stylesheet */
+/* Original styling adjusted for custom container */
 .swiper-pagination-bullet {
-  width: 8px !important;
-  height: 8px !important;
+  width: 10px !important;
+  height: 10px !important;
   background: #d1d5db !important;
   opacity: 1;
-  border-radius: 9999px;
-  margin: 0 4px !important;
+  border-radius: 100%;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .swiper-pagination-bullet-active {
   background: #a7897b !important;
-  border-radius: 9999px;
+  border-radius: 100%;
 }
