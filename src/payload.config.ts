@@ -1,16 +1,18 @@
 // storage-adapter-import-placeholder
-import { mongooseAdapter } from "@payloadcms/db-mongodb";
-import { lexicalEditor } from "@payloadcms/richtext-lexical";
-import path from "path";
-import { buildConfig } from "payload";
-import { fileURLToPath } from "url";
-import sharp from "sharp";
+import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import path from 'path'
+import { buildConfig } from 'payload'
+import { fileURLToPath } from 'url'
+import sharp from 'sharp'
 
-import { Users } from "@/app/(payload)/_collections/Users";
-import { Media } from "@/app/(payload)/_collections/Media";
+import { Users } from '@/app/(payload)/_collections/Users'
+import { Media } from '@/app/(payload)/_collections/Media'
+import { Categories } from '@/app/(payload)/_collections/Categories'
+import Products from '@/app/(payload)/_collections/Products'
 
-const filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(filename);
+const filename = fileURLToPath(import.meta.url)
+const dirname = path.dirname(filename)
 
 export default buildConfig({
   admin: {
@@ -19,17 +21,17 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Categories, Products],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || "",
+  secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
-    outputFile: path.resolve(dirname, "payload-types.ts"),
+    outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: mongooseAdapter({
-    url: process.env.DATABASE_URI || "",
+    url: process.env.DATABASE_URI || '',
   }),
   sharp,
   plugins: [
     // storage-adapter-placeholder
   ],
-});
+})

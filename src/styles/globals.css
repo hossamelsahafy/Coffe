@@ -1,6 +1,17 @@
 @import 'tailwindcss';
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html,
 body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   background-color: black;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .container {
   @apply max-w-7xl mx-auto p-6;
@@ -23,4 +34,10 @@ body {
   --color-base-border: #272727;
   --color-coffeText: #a7897b;
   --color-highlightedProductsbg: #40342f;
+}
+/* في ProductCard.css */
+.card {
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
