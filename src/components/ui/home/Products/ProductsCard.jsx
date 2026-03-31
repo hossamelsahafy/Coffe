@@ -5,17 +5,19 @@ import { IoEyeOutline } from 'react-icons/io5'
 import { FiPlus } from 'react-icons/fi'
 import Image from 'next/image'
 
-const ProductCard = ({ product, locale }) => {
+const ProductCard = ({ product, locale, bg }) => {
   const hasChoices = product.choices?.length > 0
   const options = hasChoices ? product.choices[0].options : product.colors
 
   const [selectedOption, setSelectedOption] = useState(options[0])
+  console.log(bg)
 
   return (
-    <div className="bg-highlightedProductsbg flex md:flex-row flex-col justify-center w-full gap-4 p-4 rounded-lg h-full min-h-25 min-w-0">
-      <div className="flex justify-between items-start w-full gap-2">
-        <div className="flex md:hidden"></div>
-        <div className="flex justify-center items-center">
+    <div
+      className={`${bg ? 'backdrop-blur-sm bg-forTra' : 'bg-highlightedProductsbg'} flex md:flex-row flex-col justify-center w-full gap-4 p-4 rounded-lg h-full min-h-25 min-w-0`}
+    >
+      <div className="flex justify-center w-full relative gap-4">
+        <div className="flex justify-between items-center">
           <Image
             src={selectedOption.image.imageUrl}
             alt={locale === 'en' ? product.title : product.titleAr}
@@ -26,9 +28,13 @@ const ProductCard = ({ product, locale }) => {
         </div>
 
         {/* Icons */}
-        <div className="flex flex-col justify-center items-center  text-2xl md:text-lg font-semibold cursor-pointer gap-2">
-          <CiHeart />
-          <IoEyeOutline />
+        <div>
+          <div
+            className={`absolute top-0 ${locale === 'ar' ? 'left-0 ' : 'right-0'} text-2xl md:text-lg font-semibold cursor-pointer gap-2`}
+          >
+            <CiHeart className="mb-2" />
+            <IoEyeOutline />
+          </div>
         </div>
       </div>
       <div className="flex flex-col gap-2 min-w-0  w-full">
@@ -63,11 +69,11 @@ const ProductCard = ({ product, locale }) => {
 
         <div className="flex gap-4 justify-between items-center w-full">
           <div className="flex font-bold flex-col items-center min-w-0">
-            <p className="whitespace-nowrap">
+            <p className="whitespace-nowrap  sm:text-sm lg:text-base">
               {selectedOption.priceBefore || product.priceAfter} USD
             </p>
             <p
-              className="relative text-gray-400 whitespace-nowrap
+              className="relative text-gray-400 whitespace-nowrap  sm:text-sm lg:text-base
               before:absolute before:left-0 before:right-0 before:top-1/2 before:border-t-2 before:border-gray-400"
             >
               {selectedOption.priceBefore || product.priceBefore} USD
@@ -75,13 +81,13 @@ const ProductCard = ({ product, locale }) => {
           </div>
 
           <button
-            className="relative pb-1 whitespace-nowrap 
+            className="relative pb-1 whitespace-nowrap
             after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px after:w-full 
-            after:bg-base-light after:transition-all after:duration-300
+            after:bg-base-light after:transition-all after:duration-300 sm:text-sm lg:text-base
             hover:after:bg-base-coffe cursor-pointer uppercase flex items-center font-bold"
           >
             <FiPlus />
-            {locale === 'en' ? 'add to cart' : 'اضف لعربة التسوق'}
+            {locale === 'en' ? 'add to cart' : 'اضف للسلة'}
           </button>
         </div>
       </div>

@@ -44,5 +44,11 @@
     "fresh": "Fresh roasted coffee",
     "freshSpan": "with 24h delivery",
     "partners": "partners"
+  },
+  "headerTwo": {
+    "title": "Coffee",
+    "subtitle": "The Best Coffee",
+    "description": "As the coffee shop market becomes more popular, the number of cafe websites is growing. The internet and social media play an important role in finding new customers.",
+    "showProducts": "Show Products"
   }
 }

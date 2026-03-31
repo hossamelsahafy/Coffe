@@ -50,15 +50,23 @@ const HightLightedProducts = ({ categories, products }) => {
             className="
             font-semibold relative pb-1 text-lg after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:bg-base-light after:transition-all after:duration-300 hover:after:bg-base-coffe"
           >
-            {locale === 'en' ? 'Showmoreproducts' : 'عرض المزيد من المنتجات'}
+            {locale === 'en' ? 'Show Products' : 'عرض المنتجات'}
           </Link>
         </div>
       </div>
-      <GridSwiper
-        filteredProducts={filteredProducts}
-        locale={locale}
-        renderItem={(product) => <ProductCard product={product} locale={locale} />}
-      />
+      <div className="w-full">
+        <GridSwiper
+          filteredProducts={filteredProducts}
+          loop={true}
+          breakpoints={{
+            0: { slidesPerView: 1, grid: { rows: 1 } },
+            640: { slidesPerView: 2, grid: { rows: 2 } },
+            768: { slidesPerView: 2, grid: { rows: 2 } },
+            1024: { slidesPerView: 3, grid: { rows: 2 } },
+          }}
+          renderItem={(product) => <ProductCard product={product} locale={locale} />}
+        />
+      </div>
     </div>
   )
 }

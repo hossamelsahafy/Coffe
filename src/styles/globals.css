@@ -24,6 +24,7 @@ body {
   --color-base-nav: #262626;
   --color-base-border: #272727;
   --color-coffeText: #a7897b;
+  --color-forTra: #a7897b61;
   --color-highlightedProductsbg: #40342f;
 }
 @theme {
@@ -33,11 +34,21 @@ body {
   --color-base-nav: #262626;
   --color-base-border: #272727;
   --color-coffeText: #a7897b;
+  --color-forTra: #a7897b61;
   --color-highlightedProductsbg: #40342f;
 }
-/* في ProductCard.css */
-.card {
-  transition:
-    transform 0.25s ease,
-    opacity 0.25s ease;
+/* globals.css or your global stylesheet */
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: #d1d5db !important;
+  opacity: 1;
+  border-radius: 9999px;
+  margin: 0 4px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #a7897b !important;
+  border-radius: 9999px;
 }

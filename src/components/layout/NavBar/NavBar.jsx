@@ -6,7 +6,7 @@ import DesktopNav from './DesktopNav'
 import MobileNav from './MobileNav'
 import { CiSearch } from 'react-icons/ci'
 import { IoPerson } from 'react-icons/io5'
-import Video from '@/components/ui/Video/Video'
+import Video from '@/components/shared/Video/Video'
 const NavBar = ({ locale }) => {
   const t = useTranslations('nav')
   const otherLocale = locale === 'en' ? 'ar' : 'en'
@@ -68,7 +68,11 @@ const NavBar = ({ locale }) => {
   return (
     <div className="relative w-full min-h-screen">
       {/* Video background */}
-      <Video className="absolute inset-0 w-full h-full object-cover z-0" />
+      <Video
+        src={'https://res.cloudinary.com/dnszjyuxi/video/upload/v1773676530/Coffe1_tlxjvt.mp4'}
+        linear={true}
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
       {/* NavBar */}
       <div className="relative z-20 w-full">

@@ -180,6 +180,7 @@ export interface Product {
   titleAr?: string | null;
   subtitle?: string | null;
   subtitleAr?: string | null;
+  important?: boolean | null;
   category: string | Category;
   type?: string | null;
   typeAr?: string | null;
@@ -347,6 +348,7 @@ export interface ProductsSelect<T extends boolean = true> {
   titleAr?: T;
   subtitle?: T;
   subtitleAr?: T;
+  important?: T;
   category?: T;
   type?: T;
   typeAr?: T;

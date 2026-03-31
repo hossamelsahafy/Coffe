@@ -14,6 +14,30 @@ export const Products: CollectionConfig = {
     { name: 'subtitle', type: 'text' },
     { name: 'subtitleAr', type: 'text' },
     {
+      name: 'important',
+      type: 'checkbox',
+      label: 'Important Product',
+      defaultValue: false,
+      validate: async (value, { req, operation, siblingData }) => {
+        if (!value) return true
+
+        const count = await req.payload.find({
+          collection: 'products',
+          where: { important: { equals: true } },
+          limit: 0,
+        })
+
+        const currentId = siblingData?.id
+        const total = currentId && operation === 'update' ? count.totalDocs - 1 : count.totalDocs
+
+        if (total >= 2) {
+          return 'Cannot have more than 2 important products'
+        }
+
+        return true
+      },
+    },
+    {
       name: 'category',
       type: 'relationship',
       relationTo: 'categories',
